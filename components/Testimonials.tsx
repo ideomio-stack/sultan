@@ -41,8 +41,8 @@ const Testimonials: React.FC = () => {
           <div className="flex flex-wrap justify-center items-center gap-16 md:gap-24 opacity-20 hover:opacity-100 transition-opacity duration-1000">
             <span className="text-4xl font-oswald font-black italic tracking-tighter text-white">Leisure</span>
             <span className="text-4xl font-oswald font-black italic tracking-tighter text-white">Rep</span>
-            <span className="text-4xl font-oswald font-black italic tracking-tighter text-white">amateur</span>
-            <span className="text-4xl font-oswald font-black italic tracking-tighter text-white">pro</span>
+            <span className="text-4xl font-oswald font-black italic tracking-tighter text-white">Amateur</span>
+            <span className="text-4xl font-oswald font-black italic tracking-tighter text-white">Pro</span>
           </div>
         </div>
       </div>
