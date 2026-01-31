@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Navbar from './components/Navbar';
+import logo from './logo/logo.png';
 import Hero from './components/Hero';
 import BrandBanner from './components/BrandBanner';
 import ValueProps from './components/ValueProps';
@@ -13,9 +14,9 @@ const App: React.FC = () => {
       <Navbar />
       <main>
         <Hero />
-        
+
         <BrandBanner />
-        
+
         <section id="gallery" className="py-32 bg-[#0a0a0a] border-y border-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-10">
@@ -23,9 +24,8 @@ const App: React.FC = () => {
                 <h2 className="text-xs font-black text-maroon-600 uppercase tracking-[0.4em] mb-4">PORTFOLIO</h2>
                 <p className="text-5xl lg:text-7xl font-oswald font-bold text-white uppercase italic tracking-tighter leading-none">THE BLACKLIST</p>
               </div>
-              <p className="text-gray-500 max-w-sm text-right font-medium">Limited run drops and custom team armor crafted for the elite.</p>
             </div>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 "https://images.unsplash.com/photo-1519766304817-4f37bda74a26?auto=format&fit=crop&q=80&w=600",
@@ -50,19 +50,18 @@ const App: React.FC = () => {
         <ContactForm />
       </main>
 
-      <footer className="bg-black py-20 border-t border-white/5">
+      <footer className="bg-black py-10 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-12">
-            <div className="text-3xl font-oswald font-black tracking-tighter text-white">
-              ELITE<span className="text-maroon-700 underline decoration-white/10 underline-offset-8">JERSEYS</span>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
+            <div className="flex flex-col items-center md:items-start gap-4">
+              <img src={logo} alt="Sultan Athletic" className="h-10 w-auto" />
+              <p className="text-[10px] font-black text-gray-800 uppercase tracking-widest italic">© 1999 Sultan Athletic INC.</p>
             </div>
-            <div className="flex flex-wrap justify-center space-x-10 text-[10px] font-black text-gray-600 uppercase tracking-[0.3em]">
-              <a href="#" className="hover:text-maroon-600 transition-colors">Privacy</a>
-              <a href="#" className="hover:text-maroon-600 transition-colors">Terms</a>
-              <a href="#" className="hover:text-maroon-600 transition-colors">Bulk</a>
-              <a href="#" className="hover:text-maroon-600 transition-colors">Sizing</a>
+            <div className="text-[10px] font-black text-gray-600 uppercase tracking-[0.3em] leading-relaxed">
+              <p>1601 Bayview Ave Suite 43555</p>
+              <p>Toronto, Ontario, M4G 4G8</p>
+              <p>Canada</p>
             </div>
-            <p className="text-[10px] font-black text-gray-800 uppercase tracking-widest italic">© 2024 ELITE CUSTOM ARMOR INC.</p>
           </div>
         </div>
       </footer>

@@ -60,7 +60,9 @@ const ContactForm: React.FC = () => {
           </div>
           <h2 className="text-5xl font-oswald font-bold mb-8 uppercase italic tracking-tighter">MISSION INITIATED</h2>
           <p className="text-xl text-gray-400 mb-12 leading-relaxed">
-            Our lead creative is analyzing your profile. We'll be in touch at <span className="text-maroon-500 font-black">{formData.email}</span> shortly.
+            Our team is analyzing your request. We'll be in touch at <span className="text-maroon-500 font-black">{formData.email}</span> shortly.<br />
+            <span className="block mt-4 text-white font-bold">416-410-9200</span>
+            <span className="block text-maroon-500 font-black">info@sultanathletic.com</span>
           </p>
           <button
             onClick={() => setIsSubmitted(false)}

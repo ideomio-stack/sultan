@@ -22,11 +22,10 @@ const Testimonials: React.FC = () => {
 
         <div className="grid md:grid-cols-3 gap-0">
           {TESTIMONIALS.map((t, idx) => (
-            <div key={t.id} className={`p-12 border border-white/5 bg-black hover:bg-maroon-950/10 transition-colors duration-500 ${idx === 1 ? 'md:border-x-maroon-900/20' : ''}`}>
+            <div key={t.id} className={`p-12 border border-white/5 bg-black hover:bg-maroon-950/10 transition-colors duration-500 flex flex-col ${idx === 1 ? 'md:border-x-maroon-900/20' : ''}`}>
               <Quote className="text-maroon-900/30 mb-8" size={40} />
-              <p className="text-gray-300 text-lg italic leading-relaxed mb-10">"{t.content}"</p>
-              <div className="flex items-center space-x-5">
-                <img src={t.image} alt={t.name} className="w-12 h-12 rounded-sm object-cover grayscale hover:grayscale-0 transition-all" />
+              <p className="text-gray-300 text-lg italic leading-relaxed mb-10 flex-grow">"{t.content}"</p>
+              <div className="flex items-center space-x-5 mt-auto">
                 <div>
                   <h4 className="font-bold text-white uppercase tracking-tight leading-tight">{t.name}</h4>
                   <p className="text-[10px] text-maroon-600 font-black uppercase tracking-[0.2em]">{t.role}</p>
@@ -40,10 +39,10 @@ const Testimonials: React.FC = () => {
         <div className="mt-32 pt-16 border-t border-white/5">
 
           <div className="flex flex-wrap justify-center items-center gap-16 md:gap-24 opacity-20 hover:opacity-100 transition-opacity duration-1000">
-            <span className="text-4xl font-oswald font-black italic tracking-tighter text-white">PRO-AM</span>
-            <span className="text-4xl font-oswald font-black italic tracking-tighter text-white">VARSITY</span>
-            <span className="text-4xl font-oswald font-black italic tracking-tighter text-white">ELITE SEVEN</span>
-            <span className="text-4xl font-oswald font-black italic tracking-tighter text-white">METRO</span>
+            <span className="text-4xl font-oswald font-black italic tracking-tighter text-white">Leisure</span>
+            <span className="text-4xl font-oswald font-black italic tracking-tighter text-white">Rep</span>
+            <span className="text-4xl font-oswald font-black italic tracking-tighter text-white">amateur</span>
+            <span className="text-4xl font-oswald font-black italic tracking-tighter text-white">pro</span>
           </div>
         </div>
       </div>
