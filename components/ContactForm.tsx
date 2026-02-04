@@ -29,6 +29,10 @@ const ContactForm: React.FC = () => {
     setError(null);
 
     try {
+      console.log('--- FORM SUBMISSION STARTED ---');
+      console.log('Target URL:', WEBHOOK_URL);
+      console.log('Payload:', formData);
+
       const response = await fetch(WEBHOOK_URL, {
         method: 'POST',
         headers: {
@@ -37,14 +41,17 @@ const ContactForm: React.FC = () => {
         body: JSON.stringify(formData),
       });
 
+      console.log('Response status:', response.status);
+
       if (!response.ok) {
-        throw new Error('Failed to submit form');
+        throw new Error(`Failed to submit: ${response.status} ${response.statusText}`);
       }
 
+      console.log('Submission successful!');
       setIsSubmitted(true);
       window.scrollTo({ top: document.getElementById('contact')?.offsetTop, behavior: 'smooth' });
     } catch (err) {
-      console.error('Submission error:', err);
+      console.error('Submission MAJOR ERROR:', err);
       setError('Something went wrong. Please try again or contact us directly.');
     } finally {
       setIsSubmitting(false);
