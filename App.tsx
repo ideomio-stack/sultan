@@ -55,7 +55,7 @@ const App: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
             <div className="flex flex-col items-center md:items-start gap-4">
               <img src={logo} alt="Sultan Athletic" className="h-10 w-auto" />
-              <p className="text-[10px] font-black text-gray-800 uppercase tracking-widest italic">© 1999 Sultan Athletic INC. <span className="opacity-30 ml-2">v1.1</span></p>
+              <p className="text-[10px] font-black text-gray-800 uppercase tracking-widest italic">© 1999 Sultan Athletic INC.</p>
             </div>
             <div className="text-[10px] font-black text-gray-600 uppercase tracking-[0.3em] leading-relaxed">
               <p>1601 Bayview Ave Suite 43555</p>
