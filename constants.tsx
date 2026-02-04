@@ -62,4 +62,4 @@ export const SPORTS = [
   "Other"
 ];
 
-export const WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/rrK1mJRjfUD7qInI78ro/webhook-trigger/1e435025-379b-46bd-8568-067ebd23c104";
+export const WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/rrK1mJRjfUD7qInI78ro/webhook-trigger/a1d95c15-e227-4ca9-ba58-bd456e949865";
