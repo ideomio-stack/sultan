@@ -19,7 +19,7 @@ export const VALUE_PROPS: ValueProp[] = [
   {
     id: 3,
     title: "Fast Turnaround",
-    description: "Get your custom gear in as little as 14 days. We prioritize your season schedule so you're never waiting on the sidelines.",
+    description: "Get your custom gear in as little as 15 days. We prioritize your season schedule so you're never waiting on the sidelines.",
     icon: "Zap"
   }
 ];

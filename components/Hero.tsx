@@ -68,8 +68,8 @@ const Hero: React.FC = () => {
       {/* Badge - Repositioned */}
       <div className="absolute bottom-10 right-10 lg:bottom-20 lg:right-20 z-10 hidden lg:block">
         <div className="bg-black/80 backdrop-blur-md text-white px-8 py-6 rounded-sm border-l-4 border-maroon-600 shadow-2xl">
-          <p className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-400 mb-1">Turnaround Time</p>
-          <p className="text-4xl font-oswald font-black italic text-white">14 <span className="text-maroon-500">DAYS</span></p>
+          <p className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-400 mb-1">AS FAST AS</p>
+          <p className="text-4xl font-oswald font-black italic text-white">15 <span className="text-maroon-500">DAYS</span></p>
         </div>
       </div>
     </div>
