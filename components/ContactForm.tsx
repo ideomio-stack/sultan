@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Send, Loader2, CheckCircle2, AlertTriangle } from 'lucide-react';
 import { SPORTS, WEBHOOK_URL } from '../constants';
 import { FormData } from '../types';
+import { trackMetaEvent } from '../services/facebookTracking';
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -40,6 +41,18 @@ const ContactForm: React.FC = () => {
       if (!response.ok) {
         throw new Error('Failed to submit form');
       }
+
+      // Track Lead event
+      trackMetaEvent('Lead', {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone
+      }, {
+        content_category: 'Jersey Customization',
+        sport: formData.sport,
+        value: 0.00,
+        currency: 'USD'
+      });
 
       setIsSubmitted(true);
       window.scrollTo({ top: document.getElementById('contact')?.offsetTop, behavior: 'smooth' });

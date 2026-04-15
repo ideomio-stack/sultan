@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import logo from './logo/logo.png';
 import Hero from './components/Hero';
@@ -7,8 +7,17 @@ import BrandBanner from './components/BrandBanner';
 import ValueProps from './components/ValueProps';
 import Testimonials from './components/Testimonials';
 import ContactForm from './components/ContactForm';
+import { initMetaPixel } from './services/facebookTracking';
 
 const App: React.FC = () => {
+  useEffect(() => {
+    // Note: PIXEL_ID should be provided in environment variables
+    const PIXEL_ID = import.meta.env.VITE_META_PIXEL_ID;
+    if (PIXEL_ID) {
+      initMetaPixel(PIXEL_ID);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-black">
       <Navbar />
