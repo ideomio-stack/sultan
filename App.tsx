@@ -7,19 +7,14 @@ import BrandBanner from './components/BrandBanner';
 import ValueProps from './components/ValueProps';
 import Testimonials from './components/Testimonials';
 import ContactForm from './components/ContactForm';
-import { initMetaPixel, initClarity } from './services/facebookTracking';
+import { initMetaPixel } from './services/facebookTracking';
 
 const App: React.FC = () => {
   useEffect(() => {
     const PIXEL_ID = import.meta.env.VITE_META_PIXEL_ID;
-    const CLARITY_ID = import.meta.env.VITE_CLARITY_ID;
 
     if (PIXEL_ID) {
       initMetaPixel(PIXEL_ID);
-    }
-    
-    if (CLARITY_ID) {
-      initClarity(CLARITY_ID);
     }
   }, []);
 
