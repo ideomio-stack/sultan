@@ -2,8 +2,8 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import crypto from 'crypto';
 
-const ACCESS_TOKEN = process.env.META_ACCESS_TOKEN;
-const PIXEL_ID = process.env.META_PIXEL_ID;
+const ACCESS_TOKEN = process.env.META_ACCESS_TOKEN || process.env.VITE_META_ACCESS_TOKEN;
+const PIXEL_ID = process.env.META_PIXEL_ID || process.env.VITE_META_PIXEL_ID;
 
 const hashValue = (val: string) => {
   if (!val) return '';
