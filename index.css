@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-maroon-50: #fdf2f2;
+  --color-maroon-100: #fbe4e4;
+  --color-maroon-200: #f7cdcd;
+  --color-maroon-300: #f1a8a8;
+  --color-maroon-400: #e57777;
+  --color-maroon-500: #d54d4d;
+  --color-maroon-600: #b93232;
+  --color-maroon-700: #800000;
+  --color-maroon-800: #6b0404;
+  --color-maroon-900: #5a0808;
+  --color-maroon-950: #310202;
+  
+  --font-oswald: "Oswald", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white font-sans;
+  }
+}
+
+.font-oswald {
+  font-family: var(--font-oswald);
+}
+
+::selection {
+  background-color: #800000;
+  color: white;
+}
